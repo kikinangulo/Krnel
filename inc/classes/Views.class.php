@@ -9,7 +9,9 @@ class Views {
 
   public function load_view(){
     if(is_null($this->view)){
+      include PATH_VIEWS."templates/header.php";
       include PATH_VIEWS.$this->view_data['view'].".php";
+      include PATH_VIEWS."templates/footer.php";
     }else{
       include PATH_VIEWS.$this->view.".php";
     }
