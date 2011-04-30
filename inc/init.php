@@ -1,9 +1,9 @@
 <?php
 require 'config.php';
-require 'classes/Mysql.class.php';
-require 'classes/Facebook.php';
-require 'classes/Views.php';
-require 'classes/Helpers.php';
+
+function __autoload($class_name) {
+    require_once "classes/" . $class_name . '.class' . '.php';
+}
 
 $facebook = new Facebook(array(
   'appId'  => APP_ID,
@@ -17,8 +17,6 @@ try {
 } catch (Exception $exc) {
   //Nothing else matters
 }
-
-require_once 'classes/Application.php';
 
 global $app;
 $app  = new Application();

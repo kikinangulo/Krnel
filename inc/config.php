@@ -3,8 +3,8 @@
   define( "PATH_ROOT"       , realpath(dirname(__FILE__)."/..")."/" );
   define( "PATH_INCLUDE"    , PATH_ROOT."inc/" );
   define( "PATH_CLASSES"    , PATH_INCLUDE."classes/" );
-  define( "PATH_CSS"        , PATH_ROOT."css/" );
-  define( "PATH_JS"         , PATH_ROOT."js/" );
+  define( "PATH_CSS"        , PATH_ROOT."media/css/" );
+  define( "PATH_JS"         , PATH_ROOT."media/js/" );
   define( "PATH_VIEWS"      , PATH_ROOT."inc/views/");
 
   // Constantes para uso de la clase mysql
@@ -16,18 +16,18 @@
 	define( "FETCH_NUM"     , 6 );
   define( "DB_HOST"       , "localhost" );
   define( "DB_USER"       , "root" );
-  define( "DB_PASS"       , "notoques" );
-  define( "DB_NAME"       , "pll" );
+  define( "DB_PASS"       , "" );
+  define( "DB_NAME"       , "krnel" );
 
 	//facebook application
-  define( "APP_ID"        , "148835351845421" );
-  define( "API_KEY"       , "16e0cd36add6a97a55a65e24668fdcbc" );
-  define( "API_SECRET"    , "a8d8c625d7c8b31c443117ad36059099" );
-  define( "APP_NAME"      , "Pretty Little Liars" );
+  define( "APP_ID"        , "" );
+  define( "API_KEY"       , "" );
+  define( "API_SECRET"    , "" );
+  define( "APP_NAME"      , "Krnel" );
 
   //set application urls here
-  define( "CANVAS_URL"    , "http://apps.facebook.com/pll_secreto/" );
-  define( "CALLBACK_URL"  , "http://altodotdev.dyndns.org:8009/pll/" );
+  define( "CANVAS_URL"    , "http://apps.facebook.com/krnel/" );
+  define( "CALLBACK_URL"  , "http://krnel.com/" );
   define( "FB_GRAPH"      , "https://graph.facebook.com/" );
   define( "FB_API"        , "https://api.facebook.com/" );
 ?>
