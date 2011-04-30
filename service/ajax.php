@@ -1,19 +1,21 @@
 <?php
 include '../inc/init.php';
+
 class Ajax extends Application{
-  public function get_secrets(){
-    $offset   = $_REQUEST['offset'];
-    $secrets  = parent::get_secrets($offset);
-    $response = array();
 
-    while( $row = $this->mysql->fetch($secrets, FETCH_OBJECT) ){
-      $response[] = $row;
-    }
-
-    echo json_encode($response);
+  public function __construct($method, $params) {
+    $method = Helpers::camelize($method);
+    $this->$method($params);
   }
+
+  public function testAjaxService(array $params) {
+    echo json_encode($params);
+  }
+
 }
 
-$ajax   = new Ajax();
-$method = $_REQUEST['method'];
-$ajax->$method();
+try {
+  $Ajax = new Ajax($_REQUEST['method'], $_REQUEST['params']);
+} catch (Exception $exc) {
+  echo $exc->getTraceAsString();
+}
