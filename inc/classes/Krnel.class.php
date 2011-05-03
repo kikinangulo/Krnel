@@ -1,5 +1,5 @@
 <?php
-class Krnel{
+class Krnel extends Facebook{
   public $mysql;
   public $facebook;
 
@@ -12,11 +12,8 @@ class Krnel{
       'cookie' => true,
       'domain' => CALLBACK_URL
     ));
-  }
 
-  public static function factory(){
-    $instance = new Krnel();
-    return $instance;
+    return $this;
   }
 
 }

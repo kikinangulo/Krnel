@@ -6,4 +6,4 @@ function __autoload($class_name) {
 }
 
 global $kernel;
-$kernel = Krnel::factory();
+$kernel = new Krnel();
